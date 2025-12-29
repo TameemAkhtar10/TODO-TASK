@@ -34,7 +34,7 @@ setallusers (copyuser)
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
+            <input required
               value={name}
               onChange={(e) => setName(e.target.value)}
               type="text"
@@ -42,7 +42,7 @@ setallusers (copyuser)
               className="glass-input"
             />
 
-            <input
+            <input required
               type="text"
               placeholder="Image URL"
               className="glass-input"
@@ -51,6 +51,7 @@ setallusers (copyuser)
             />
 
             <input
+              required
               type="text"
               placeholder="Enter Role"
               className="glass-input"
@@ -59,7 +60,8 @@ setallusers (copyuser)
             />
 
             <input
-              type="text"
+              type="text" 
+              required
               placeholder="User Description"
               className="glass-input"
               value={disc}
@@ -75,7 +77,7 @@ setallusers (copyuser)
           </button>
         </form>
 
-        <div className="mt-10 w-[80%] flex flex-wrap gap-6 justify-start ">
+        <div  className="mt-10 w-[80%] flex flex-wrap gap-6 justify-start ">
           {allusers.map((elem, idx) => (
             <UserCard key={idx} elem={elem} deletehandler = {deletehandler} idx = {idx} />
           ))}
