@@ -11,8 +11,7 @@ const UserCard = (props) => {
                  transition-all duration-300 
                  hover:scale-[1.03] hover:shadow-emerald-500/20"
     >
-      {/* Delete Button */}
-      <button
+            <button
         onClick={() => props.deletehandler(props.idx)}
         className="absolute top-3 right-3 w-9 h-9 rounded-full 
                    bg-red-500/20 border border-red-500/30
