@@ -34,17 +34,17 @@ const UserCard = (props) => {
 
       {/* Content */}
       <div className="text-center mt-5">
-        <h3 className="text-xl font-semibold text-white tracking-wide">
+        <h1 className="text-xl font-semibold text-white tracking-wide">
           {props.elem.name}
-        </h3>
+        </h1>
 
-        <p className="text-emerald-400 text-sm font-medium mt-1">
+        <h4 className="text-emerald-400 text-sm font-medium mt-1">
           {props.elem.disc}
-        </p>
+        </h4>
 
-        <p className="text-gray-300 text-sm mt-3 leading-relaxed px-2">
+        <h3 className="text-gray-300 text-sm mt-3 leading-relaxed px-2">
           {props.elem.role}
-        </p>
+        </h3>
       </div>
     </div>
   );
