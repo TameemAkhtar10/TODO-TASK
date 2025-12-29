@@ -78,8 +78,8 @@ setallusers (copyuser)
         </form>
 
         <div  className="mt-10 w-[80%] flex flex-wrap gap-6 justify-start ">
-          {allusers.map((elem, idx) => (
-            <UserCard key={idx} elem={elem} deletehandler = {deletehandler} idx = {idx} />
+          {allusers.map((tameem, idx) => (
+            <UserCard key={idx} bhai={tameem} deletehandler = {deletehandler} idx = {idx} />
           ))}
         </div>
       </div>

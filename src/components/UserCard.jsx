@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserCard = (props) => {
+const UserCard = (naaaaaa) => {
   return (
     <div
       className="relative w-60 max-w-sm 
@@ -12,7 +12,7 @@ const UserCard = (props) => {
                  hover:scale-[1.03] hover:shadow-emerald-500/20"
     >
             <button
-        onClick={() => props.deletehandler(props.idx)}
+        onClick={() => naaaaaa.deletehandler(naaaaaa.idx)}
         className="absolute top-3 right-3 w-9 h-9 rounded-full 
                    bg-red-500/20 border border-red-500/30
                    text-red-400 hover:bg-red-500 hover:text-white
@@ -26,7 +26,7 @@ const UserCard = (props) => {
                    border-2 border-emerald-400/40 shadow-lg"
       >
         <img
-          src={props.elem.url}
+          src={naaaaaa.bhai.url}
           alt="user"
           className="w-full h-full object-cover"
         />
@@ -35,15 +35,15 @@ const UserCard = (props) => {
       {/* Content */}
       <div className="text-center mt-5">
         <h1 className="text-xl font-semibold text-white tracking-wide">
-          {props.elem.name}
+          {naaaaaa.bhai.name}
         </h1>
 
         <h4 className="text-emerald-400 text-sm font-medium mt-1">
-          {props.elem.disc}
+          {naaaaaa.bhai.disc}
         </h4>
 
         <h3 className="text-gray-300 text-sm mt-3 leading-relaxed px-2">
-          {props.elem.role}
+          {naaaaaa.bhai.role}
         </h3>
       </div>
     </div>
