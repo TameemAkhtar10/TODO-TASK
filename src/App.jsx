@@ -5,23 +5,30 @@ const App = () => {
   const [url, setUrl] = useState("");
   const [role, setRole] = useState("");
   const [disc, setDisc] = useState("");
-  const [allusers, setallusers] = useState([]);
+  let realdata = JSON.parse(localStorage.getItem ('all-users') || [])
+  
+  const [allusers, setallusers] = useState(realdata);
+
 
   const submithandler = (e) => {
     e.preventDefault();
-    const olduser = [...allusers, { name, url, role, disc }];
+    const olduser = [...allusers]
+    olduser.push ({ name, url, role, disc })
     setallusers(olduser);
+    localStorage.setItem ('all-users',JSON.stringify (olduser))
 
     setName("");
     setUrl("");
     setRole("");
     setDisc("");
   };
-const deletehandler = (idx)=> {
-  let copyuser = [...allusers];
-  copyuser.splice (idx,1)
-setallusers (copyuser)    
-}
+  const deletehandler = (idx) => {
+    let copyuser = [...allusers];
+    copyuser.splice(idx, 1)
+    setallusers(copyuser)
+     localStorage.setItem ('all-users',JSON.stringify (copyuser))
+
+  }
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-black via-[#0f0f1a] to-black flex flex-col items-center px-4 py-10">
@@ -60,7 +67,7 @@ setallusers (copyuser)
             />
 
             <input
-              type="text" 
+              type="text"
               required
               placeholder="User Description"
               className="glass-input"
@@ -69,7 +76,7 @@ setallusers (copyuser)
             />
           </div>
 
-          <button 
+          <button
             type="submit"
             className="mt-8 w-full bg-emerald-500/90 hover:bg-emerald-500 text-black font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg cursor-pointer"
           >
@@ -77,10 +84,13 @@ setallusers (copyuser)
           </button>
         </form>
 
-        <div  className="mt-10 w-[80%] flex flex-wrap gap-6 justify-start ">
+        <div className="mt-10 w-[80%] flex flex-wrap gap-6 justify-start ">
           {allusers.map((tameem, idx) => (
-            <UserCard key={idx} bhai={tameem} deletehandler = {deletehandler} idx = {idx} />
+            <UserCard key={idx} bhai={tameem} deletehandler={deletehandler} idx={idx} />
           ))}
+
+
+
         </div>
       </div>
 

@@ -9,7 +9,7 @@ const UserCard = (naaaaaa) => {
                  rounded-2xl p-6 
                  shadow-2xl 
                  transition-all duration-300 
-                 hover:scale-[1.03] hover:shadow-emerald-500/20"
+                 hover:scale-[1.03] hover:shadow-emerald-500/20 overflow-hidden"
     >
             <button
         onClick={() => naaaaaa.deletehandler(naaaaaa.idx)}
@@ -32,7 +32,6 @@ const UserCard = (naaaaaa) => {
         />
       </div>
 
-      {/* Content */}
       <div className="text-center mt-5">
         <h1 className="text-xl font-semibold text-white tracking-wide">
           {naaaaaa.bhai.name}
