@@ -33,15 +33,15 @@ const UserCard = (naaaaaa) => {
       </div>
 
       <div className="text-center mt-5">
-        <h1 className="text-xl font-semibold text-white tracking-wide">
+        <h1 className="text-2xl font-semibold text-white tracking-wide">
           {naaaaaa.bhai.name}
         </h1>
 
-        <h4 className="text-emerald-400 text-sm font-medium mt-1">
+        <h4 className="text-emerald-400 text-xl font-light mt-1">
           {naaaaaa.bhai.disc}
         </h4>
 
-        <h3 className="text-gray-300 text-sm mt-3 leading-relaxed px-2">
+        <h3 className="text-gray-300 text-xl mt-1 font-light leading-relaxed px-2">
           {naaaaaa.bhai.role}
         </h3>
       </div>
