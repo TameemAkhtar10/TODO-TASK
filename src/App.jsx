@@ -24,7 +24,13 @@ const App = () => {
   };
   const deletehandler = (idx) => {
     let copyuser = [...allusers];
-    copyuser.splice(idx, 1)
+    let conff = confirm (`bhai tu chahtaa h na card delete krna `)
+    if (conff) {
+      copyuser.splice(idx, 1)
+    }
+    else {
+      alert (`element can not be deletedd`)
+    }
     setallusers(copyuser)
      localStorage.setItem ('all-users',JSON.stringify (copyuser))
 
