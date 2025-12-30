@@ -28,20 +28,20 @@ const UserCard = (naaaaaa) => {
         <img
           src={naaaaaa.bhai.url}
           alt="user"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover capitalize"
         />
       </div>
 
       <div className="text-center mt-5">
-        <h1 className="text-2xl font-semibold text-white tracking-wide">
+        <h1 className="text-2xl font-semibold text-white tracking-wide capitalize">
           {naaaaaa.bhai.name}
         </h1>
 
-        <h4 className="text-emerald-400 text-xl font-light mt-1">
+        <h4 className="text-emerald-400 text-xl font-light mt-1 capitalize">
           {naaaaaa.bhai.disc}
         </h4>
 
-        <h3 className="text-gray-300 text-xl mt-1 font-light leading-relaxed px-2">
+        <h3 className="text-gray-300 text-xl mt-1 font-light capitalize leading-relaxed px-2">
           {naaaaaa.bhai.role}
         </h3>
       </div>
