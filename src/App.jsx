@@ -5,7 +5,7 @@ const App = () => {
   const [url, setUrl] = useState("");
   const [role, setRole] = useState("");
   const [disc, setDisc] = useState("");
-  let realdata = JSON.parse(localStorage.getItem ('all-users') || [])
+  let realdata = JSON.parse(localStorage.getItem ('all-users') )|| []
   
   const [allusers, setallusers] = useState(realdata);
 
